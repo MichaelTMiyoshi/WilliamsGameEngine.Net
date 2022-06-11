@@ -2,6 +2,7 @@
 using SFML.Audio;
 using SFML.Graphics;
 using SFML.System;
+using System.Collections.Generic;
 
 namespace MyGame
 {
