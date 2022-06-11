@@ -60,9 +60,9 @@ namespace GameEngine
         }
 
         // Returns a reference to the game's RenderWindow.
-        public static RenderWindow GetRenderWindow()
+        public static RenderWindow RenderWindow
         {
-            return _window;
+            get { return _window; }
         }
 
         // Get a texture (pixels) from a file
@@ -102,9 +102,9 @@ namespace GameEngine
         }
 
         // Returns the active running scene.
-        public static Scene GetCurrentScene()
+        public static Scene CurrentScene
         {
-            return _currentScene;
+            get { return _currentScene; }
         }
 
         // Specifies the next Scene to run.

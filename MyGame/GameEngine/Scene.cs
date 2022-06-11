@@ -22,12 +22,12 @@ namespace GameEngine
         public void Update(Time time)
         {
             // Clear the window.
-            Game.GetRenderWindow().Clear();
+            Game.RenderWindow.Clear();
 
             // Go through our normal sequence of game loop stuff.
 
             // Handle any keyboard, mouse events, etc. for our game window.
-            Game.GetRenderWindow().DispatchEvents();
+            Game.RenderWindow.DispatchEvents();
 
             HandleCollisions();
             UpdateGameObjects(time);
@@ -35,7 +35,7 @@ namespace GameEngine
             DrawGameObjects();
 
             // Draw the window as updated by the game objects.
-            Game.GetRenderWindow().Display();
+            Game.RenderWindow.Display();
         }
 
         // This method lets game objects respond to collisions.

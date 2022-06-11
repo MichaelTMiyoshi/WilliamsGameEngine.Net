@@ -86,19 +86,21 @@ namespace GameEngine
         public AnimatedSprite(Vector2f position, int msPerFrame = DefaultMsPerFrame)
         {
             _msPerFrame = msPerFrame;
-            SetPosition(position);
+            Position = position;
         }
 
         // Sets the spritesheet texture we will use for animation frames.
-        public void SetTexture(Texture texture)
+        public Texture Texture
         {
-            _sprite.Texture = texture;
+            get { return _sprite.Texture;  }
+            set { _sprite.Texture = value; }
         }
 
         // Sets the position of the sprite.
-        public void SetPosition(Vector2f position)
+        public Vector2f Position
         {
-            _sprite.Position = position;
+            get { return _sprite.Position; }
+            set { _sprite.Position = value; }
         }
 
         // Set the origin mode, which specifies how we draw the sprite relative to its position.
@@ -141,7 +143,7 @@ namespace GameEngine
             if (!IsDrawable()) return;
 
             // Draw it.
-            Game.GetRenderWindow().Draw(_sprite);
+            Game.RenderWindow.Draw(_sprite);
         }
 
         public override void Update(Time elapsed)
