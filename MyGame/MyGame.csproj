@@ -7,6 +7,13 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' and '$(OS)' == 'Unix'">
+    <StartAction>Project</StartAction>
+    <ExternalConsole>true</ExternalConsole>
+    <EnvironmentVariables>
+      <Variable name="DYLD_LIBRARY_PATH" value="/opt/local/lib" />
+    </EnvironmentVariables>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="SFML.Net" Version="2.5.0" />
   </ItemGroup>
